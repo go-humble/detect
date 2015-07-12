@@ -8,8 +8,8 @@ Version X.X.X
 Detect is a tiny go package for detecting whether code is running on the server
 or browser. It is intended to be used with hybrid go applications and
 [gopherjs](https://github.com/gopherjs/gopherjs). Detect works great as a
-stand-alone package or in combination with other packages in the
-[Humble Toolkit](https://github.com/go-humble).
+stand-alone package or in combination with other
+[Humble](https://github.com/go-humble) packages.
 
 Detect is written in pure go. It feels like go, follows go idioms when possible, and
 compiles with the go tools. Detect runs on the server and can also be compiled
@@ -41,6 +41,9 @@ recommended. Install gopherjs with:
 go get -u github.com/gopherjs/gopherjs
 ```
 
+You can compile your application to javascript using the `gopherjs build` command. Run
+`gopherjs --help` to learn more about the gopherjs command-line tool.
+
 
 Example Usage
 -------------
@@ -50,7 +53,7 @@ compile to javascript. When you are sharing code between the server and browser,
 it is often useful to be able to quickly detect which platform the code is
 currently running on. For example, if you are sharing models between the browser
 and server, you probably want the server-side code to communicate with the
-database, whereas the brwoser-side code should not.
+database, whereas the browser-side code should not.
 
 ```go
 // The Todo type and its fields can be shared between the server and browser.
@@ -82,7 +85,7 @@ How it Works
 ------------
 
 To see if code is running as javascript, detect checks whether `js.Global`
-is nil. `js.Global` is a special gopherjs property that is only defined when
+is nil. `js.Global` is a special gopherjs property that is only non-nil when
 code is compiled to javascript.
 
 To see if code is running in the browser, detect checks for the existence of a
