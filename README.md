@@ -1,9 +1,8 @@
 Humble/detect
 =============
 
+[![Version](https://img.shields.io/badge/version-0.1.2-5272B4.svg)](https://github.com/go-humble/detect/releases)
 [![GoDoc](https://godoc.org/github.com/go-humble/detect?status.svg)](https://godoc.org/github.com/go-humble/detect)
-
-Version 0.1.1
 
 Detect is a tiny go package for detecting whether code is running on the server
 or browser. It is intended to be used with hybrid go applications and

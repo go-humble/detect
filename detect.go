@@ -5,6 +5,8 @@
 // Package detect is a tiny package for detecting whether code is running on
 // the server or browser. It is intended to be used with hybrid go applications
 // and gopherjs.
+//
+// Version 0.1.2
 package detect
 
 import (
